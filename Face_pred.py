@@ -5,7 +5,6 @@ Created on Tue Mar 15 12:24:01 2022
 @author: Necro
 """
 from PIL import Image,ImageOps
-from matplotlib import pyplot
 from numpy import asarray
 from mtcnn.mtcnn import MTCNN
 import numpy as np
@@ -71,13 +70,6 @@ def extract_face(filepath,required_size = (224, 224)):
     #pyplot.axis('off')
     #show_face(face_array)
     return face_array
-
-
-def show_face(pixels):
-    # plot the extracted face
-    pyplot.imshow(pixels)
-    # show the plot
-    pyplot.show()
 
 
 
