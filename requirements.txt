@@ -44,7 +44,6 @@ MarkupSafe==2.0.1
 matplotlib==3.3.4
 mccabe==0.6.1
 mistune==0.8.4
-mkl-fft==1.2.0
 mkl-random==1.0.4
 mkl-service==2.3.0
 mtcnn==0.1.1
