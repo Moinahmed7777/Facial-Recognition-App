@@ -1,4 +1,4 @@
-
+opencv-python==4.5.5.62
 Flask==2.0.3
 Flask-RESTful==0.3.9
 grpcio==1.44.0
