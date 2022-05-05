@@ -5,6 +5,7 @@ Created on Tue Mar 15 13:35:48 2022
 @author: Necro
 """
 from flask_restful import Resource, reqparse,abort,fields,marshal_with,request
+import gc
 
 
 
@@ -33,18 +34,19 @@ class face_pred_res(Resource):
         #print(request.json)
         
         if 'image' not in request.files:
-            print("888888888888888888888888888888888888")
+            #print("888888888888888888888888888888888888")
             
             return "No file part"
         
         file = request.files['image']
         #file2= request.files()
-        print("888888888888888888888888888888888888")
-        print(file)
+        #print("888888888888888888888888888888888888")
+        #print(file)
         #print(file2)
-        print("888888888888888888888888888888888888")
+        #print("888888888888888888888888888888888888")
         
         prediction = pred(file,embeddings_per_id)
+        gc.collect()
         return prediction
 
 class insert_face_id(Resource):
@@ -59,25 +61,29 @@ class insert_face_id(Resource):
         file = request.files.getlist("image[]")
         
         form = request.form.get('userId')
-        print('form',form)
+        #print('form',form)
         face_box= Check_face(file,embeddings_per_id)
         if (face_box[0]):
             if(Check_id(form)):
-                print('Face ID name already Exist')
+                #print('Face ID name already Exist')
+                gc.collect()
                 return {"message": "Face ID name already Exist."}, 500 # Internal Server Error
             elif(Check_embedding(file,embeddings_per_id)):
-                print('Face embeddings might be same')
+                #print('Face embeddings might be same')
+                gc.collect()
                 return {"message": "Face embeddings might be same."}, 500 # Internal Server Error
             else:
             
                 Insert_embedding(file,embeddings_per_id)
                 Insert_id(form)
+                gc.collect()
                 return {"message": "Face id Store success"}, 201
         else:
             print('Face doesnt exist in image',face_box[1])
             le_str=''
             for x in face_box[1]:
                 le_str=le_str+str(x)+' , '
+            gc.collect()
             return {"message": "Face doesnt exist in image " + le_str}, 500 # Internal Server Error
         
 
@@ -99,5 +105,6 @@ class get_all_id(Resource):
         print("all id string",string)
         print( 'type',type(string))
         X = jsonify([{list[0]: list[0]}])
+        gc.collect()
         return string 
             
