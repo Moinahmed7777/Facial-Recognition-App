@@ -13,7 +13,10 @@ from flask_restful import Api
 from flask_restful import Resource, reqparse,abort,fields,marshal_with,request
 
 from Resouces import face_pred_res,insert_face_id,get_all_id
-app = Flask(__name__)
+##
+application = Flask(__name__)
+##
+app = application
 
 api = Api(app)
 
