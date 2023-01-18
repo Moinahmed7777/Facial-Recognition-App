@@ -124,8 +124,7 @@ def is_match2(known_embedding, candidate_embedding,thresh=0.50):
 
 #*#
 def get_embedding_id():
-    embeddings_id = np.load('embedding_id.npy')
-    id_list = embeddings_id.tolist()
+    
     conn = sqlite3.connect('faces.db')
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM faces')
@@ -134,8 +133,6 @@ def get_embedding_id():
     for row in rows:
         id_list.append(str(row[1]))
     conn.close()
-    #jsonString = json.dumps(id_list)
-    #print(type(jsonString))
     return id_list
     
 #*#    
