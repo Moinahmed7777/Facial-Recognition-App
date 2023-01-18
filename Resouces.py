@@ -20,30 +20,11 @@ class face_pred_res(Resource):
         
         data1 = face_pred_res.parser.parse_args()
         embeddings_per_id = 3
-        #print(data1)
-        #print("7777777777777777777777777777777777777777")
-        #print(request.files['image'])
-        #print(request.files)
-        #print("args")
-        #print(request.args)
-        #print("data")
-        #print(request.data)
-        #print("values")
-        #print(request.values)
-        #print("json")
-        #print(request.json)
         
         if 'image' not in request.files:
-            #print("888888888888888888888888888888888888")
-            
             return "No file part"
         
         file = request.files['image']
-        #file2= request.files()
-        #print("888888888888888888888888888888888888")
-        #print(file)
-        #print(file2)
-        #print("888888888888888888888888888888888888")
         
         prediction = pred(file,embeddings_per_id)
         gc.collect()
@@ -74,8 +55,8 @@ class insert_face_id(Resource):
                 return {"message": "Face embeddings might be same."}, 500 # Internal Server Error
             else:
             
-                Insert_embedding(file,embeddings_per_id)
-                Insert_id(form)
+                Insert_embedding(file,embeddings_per_id,form)
+                #Insert_id(form)
                 gc.collect()
                 return {"message": "Face id Store success"}, 201
         else:
