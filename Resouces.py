@@ -9,7 +9,7 @@ import gc
 
 
 
-from Face_pred import pred,Insert_embedding,Insert_id,Check_embedding,Check_id,Check_face,get_embedding_id
+from Face_pred import pred,Insert_embedding,Check_embedding,Check_id,Check_face,get_embedding_id
     
 from flask import jsonify
 
