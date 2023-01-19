@@ -95,8 +95,8 @@ class get_all_id(Resource):
 class delete_id(Resource):
     parser = reqparse.RequestParser()
     def delete(self):
-        #form = request.form.get('ID')
-        form = request.json.get('ID')
+        form = request.form.get('ID')
+        #form = request.json.get('ID')
 
         print('form',form)
         return 'lel'
