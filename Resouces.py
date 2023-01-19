@@ -44,6 +44,9 @@ class insert_face_id(Resource):
         form = request.form.get('userId')
         print('form',form)
         face_box= Check_face(file,embeddings_per_id)
+        print('#################')
+        print(face_box)
+        print('#################')
         if (face_box[0]):
             if(Check_id(form)):
                 #print('Face ID name already Exist')
