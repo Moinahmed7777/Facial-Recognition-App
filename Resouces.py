@@ -95,8 +95,18 @@ class get_all_id(Resource):
 class delete_id(Resource):
     parser = reqparse.RequestParser()
     def delete(self):
+        """
         form = request.form.get('ID')
         #form = request.json.get('ID')
 
         print('form',form)
         return 'lel'
+        """
+        if request.method == 'DELETE' and request.content_type == 'application/x-www-form-urlencoded':
+            form = request.form.get('ID')
+        if form:
+            # do something with the ID
+            print('lel')
+        else:
+            return jsonify({"error": "ID is not provided"})
+
