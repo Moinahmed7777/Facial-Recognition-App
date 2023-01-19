@@ -102,8 +102,7 @@ class delete_id(Resource):
                 # do something with the ID
                 #delete id logic
                 delete_face(form)
-                res = {"key":"ID successfuly deleted"}
-                return jsonify(res),201
+                return {"message":"ID successfuly deleted"},201
             else:
-                return {"error": "ID is not provided"}, 500
+                return {'message': "ID is not provided"}, 400
 
