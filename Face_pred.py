@@ -160,7 +160,7 @@ def Check_id(ID):
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM faces')
     rows = cursor.fetchall()
-    
+    conn.close()
     for row in rows:
         if row[1]== ID:
             return False
