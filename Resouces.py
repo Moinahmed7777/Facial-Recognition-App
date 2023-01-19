@@ -101,7 +101,8 @@ class delete_id(Resource):
             if form:
                 # do something with the ID
                 #delete id logic
-                return jsonify({"ID deleted successfully"})
+                print('lel',form)
+                
             else:
                 return jsonify({"error": "ID is not provided"})
 
