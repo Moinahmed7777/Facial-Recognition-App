@@ -106,7 +106,7 @@ class delete_id(Resource):
             form = request.form.get('ID')
             if form:
                 # do something with the ID
-                print('lel')
+                print('lel',form)
             else:
                 return jsonify({"error": "ID is not provided"})
 
