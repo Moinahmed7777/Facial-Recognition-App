@@ -97,3 +97,4 @@ class delete_id(Resource):
     def delete(self):
         form = request.form.get('userId')
         print('form',form)
+        return 'lel'
