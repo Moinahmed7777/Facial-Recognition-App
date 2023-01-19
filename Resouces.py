@@ -102,7 +102,7 @@ class delete_id(Resource):
                 # do something with the ID
                 #delete id logic
                 print('lel',form)
-                
+                return "ID successfuly deleted"
             else:
                 return jsonify({"error": "ID is not provided"})
 
