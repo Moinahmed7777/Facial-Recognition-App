@@ -163,8 +163,8 @@ def Check_id(ID):
     conn.close()
     for row in rows:
         if row[1]== ID:
-            return False
-    return True
+            return True
+    return False
     
 #*#
 def Check_embedding(X,embeddings_per_id):
