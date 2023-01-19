@@ -88,4 +88,9 @@ class get_all_id(Resource):
         X = jsonify([{list[0]: list[0]}])
         gc.collect()
         return string 
-            
+
+class delete_id(Resource):
+    parser = reqparse.RequestParser()
+    def delete(self):
+        form = request.form.get('userId')
+        print('form',form)
