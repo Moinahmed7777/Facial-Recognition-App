@@ -42,7 +42,7 @@ class insert_face_id(Resource):
         file = request.files.getlist("image[]")
         
         form = request.form.get('userId')
-        #print('form',form)
+        print('form',form)
         face_box= Check_face(file,embeddings_per_id)
         if (face_box[0]):
             if(Check_id(form)):
