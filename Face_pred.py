@@ -306,3 +306,13 @@ def pred(X,embeddings_per_id):
          print(type(pred_class))
          return pred_class
      
+
+def delete_face(name):
+    conn = sqlite3.connect('faces.db')
+    cursor = conn.cursor()
+    cursor.excecute('DELETE FROM faces WHERE name ?',(name,))
+    conn.commit()
+    conn.close()
+    return
+    
+    

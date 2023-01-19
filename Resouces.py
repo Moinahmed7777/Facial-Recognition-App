@@ -9,7 +9,7 @@ import gc
 
 
 
-from Face_pred import pred,Insert_embedding,Check_embedding,Check_id,Check_face,get_embedding_id
+from Face_pred import pred,Insert_embedding,Check_embedding,Check_id,Check_face,get_embedding_id,delete_face
     
 from flask import jsonify
 
@@ -101,8 +101,8 @@ class delete_id(Resource):
             if form:
                 # do something with the ID
                 #delete id logic
-                print('lel',form)
-                return "ID successfuly deleted"
+                delete_face(form)
+                return {"ID successfuly deleted"}, 201
             else:
-                return jsonify({"error": "ID is not provided"})
+                return {"error": "ID is not provided"}, 500
 
