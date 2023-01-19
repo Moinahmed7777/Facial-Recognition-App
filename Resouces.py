@@ -100,8 +100,8 @@ class delete_id(Resource):
             form = request.form.get('ID')
             if form:
                 # do something with the ID
-                print('lel',form)
-                return jsonify({"error": "ID is provided"})
+                #delete id logic
+                return jsonify({"ID deleted successfully"})
             else:
                 return jsonify({"error": "ID is not provided"})
 
