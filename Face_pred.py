@@ -251,6 +251,7 @@ def Check_face(X,embeddings_per_id):
     
         
 #*#
+# For Scalability add sub category such as Eye color or other facial features to reduce time complexity, better performance when there are alot of rows.
 def pred(X,embeddings_per_id):
      img = Image.open(X.stream)
      new_embedding=get_embeddings(img)
@@ -313,6 +314,6 @@ def delete_face(name):
     cursor.execute('DELETE FROM faces WHERE name = ?',(name,))
     conn.commit()
     conn.close()
-    return
+    
     
     

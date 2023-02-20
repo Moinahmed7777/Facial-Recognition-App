@@ -93,16 +93,18 @@ class get_all_id(Resource):
         return string 
 
 class delete_id(Resource):
-    parser = reqparse.RequestParser()
-    def delete(self):
-        
+    def delete(self,NAME):
         if request.method == 'DELETE':
+            delete_face(NAME)
+            return {"message":"ID successfuly deleted"},201
+            '''
             form = request.form.get('ID')
             if form:
                 # do something with the ID
                 #delete id logic
                 delete_face(form)
-                return {"message":"ID successfuly deleted"},201
+                
             else:
                 return {'message': "ID is not provided"}, 400
+            '''
 
