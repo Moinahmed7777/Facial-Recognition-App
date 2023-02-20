@@ -24,7 +24,7 @@ api.add_resource(face_pred_res, '/face')
 api.add_resource(insert_face_id, '/App')
 api.add_resource(get_all_id, '/get')
 
-api.add_resource(delete_id, '/delete/<str:NAME>')
+api.add_resource(delete_id, '/delete/<string:NAME>')
 
 
 
