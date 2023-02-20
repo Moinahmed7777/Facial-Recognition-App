@@ -29,7 +29,8 @@ api.add_resource(delete_id, '/delete/<str:NAME>')
 
 
 if __name__ == '__main__':
-    app.run(port=8081, debug=True)
+    app.run(host='0.0.0.0',port=8080)
+    #app.run(port=8081, debug=True)
     #app.run(port=8081, debug=True)
     #app.run(port=8082, debug=True)
     
