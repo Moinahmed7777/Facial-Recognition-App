@@ -1,9 +1,9 @@
 # Facial Recognition App
 
-##Overview
+## Overview
 This is a fully functional mobile application for facial recognition. The project uses Convolutional Neural Networks (CNNs) to detect and verify faces. It showcases how to apply machine learning in mobile applications, create REST API endpoints using Flask, communicate with SQLite database, and connect the backend server with the front-end user interface.
 
-##Features
+## Features
 > Utilizes Convolutional Neural Networks (CNNs) for facial recognition. MTCNN to detect faces and FACE NET to create a face embedding of the face.
 > Front-end user interface designed using React Native.
 > Backend REST API designed using the Flask framework.
