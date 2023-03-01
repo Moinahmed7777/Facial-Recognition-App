@@ -16,7 +16,15 @@ This is a fully functional mobile application for facial recognition. The projec
 - SQLite.
 - AWS.
 
-## Diagrams and Demo
+## Diagrams
+
+## Demo
+
+## How to Run
+- Clone the repository
+- Navigate to Api directory and Create a virtual environment with python version 3.6.13 and install all the dependency from requirement.txt using pip "pip install -r requirements.txt"
+- Run the Flask Application using python, "python app.py"
+- Navigate to Client directory and run "npx react-native run-android"
 
 ## Conclusion
 This project demonstrates how to implement facial recognition in a mobile application and provides a useful example of using machine learning, REST APIs, and database communication in a real-world application.
