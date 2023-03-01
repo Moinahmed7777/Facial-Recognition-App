@@ -28,3 +28,6 @@ This is a fully functional mobile application for facial recognition. The projec
 
 ## Conclusion
 This project demonstrates how to implement facial recognition in a mobile application and provides a useful example of using machine learning, REST APIs, and database communication in a real-world application.
+
+## References
+- Deep Learning for Computer Vision, Image Classification, Object Detection, and Face Recognition in Python by Jason Brownlee, Edition: v1.8.
