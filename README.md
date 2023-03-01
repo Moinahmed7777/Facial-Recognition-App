@@ -11,10 +11,10 @@ This is a fully functional mobile application for facial recognition. The projec
 - Deployment on an AWS server.
 
 ## Technologies Used
-> React Native.
-> Flask.
-> SQLite.
-> AWS.
+- React Native.
+- Flask.
+- SQLite.
+- AWS.
 
 ## Diagrams and Demo
 
