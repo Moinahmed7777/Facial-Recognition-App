@@ -14,7 +14,8 @@ This is a fully functional mobile application for facial recognition. The projec
 - React Native.
 - Flask.
 - SQLite.
-- AWS.
+- AWS EC2
+- NGINX
 
 ## Diagrams
 ![Flowchart (1)](https://user-images.githubusercontent.com/33766593/222327824-70a492b2-358d-44e3-b7e5-3e61ed9da6a8.jpeg)
