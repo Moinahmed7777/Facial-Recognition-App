@@ -21,8 +21,8 @@ This is a fully functional mobile application for facial recognition. The projec
 ![Flowchart (1)](https://user-images.githubusercontent.com/33766593/222327824-70a492b2-358d-44e3-b7e5-3e61ed9da6a8.jpeg)
 ![image](https://user-images.githubusercontent.com/33766593/222328627-3396f24e-0897-4065-acd0-61afb5860c28.png)
 
-
 ## Demo
+![FRdemo](https://user-images.githubusercontent.com/33766593/222335595-8dc46488-dcb0-4a5c-a3a1-e7a6da131eb0.png)
 
 ## How to Run
 - Clone the repository
