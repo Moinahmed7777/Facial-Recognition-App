@@ -17,7 +17,7 @@ This is a fully functional mobile application for facial recognition. The projec
 - AWS.
 
 ## Diagrams
-![Flowchart](https://user-images.githubusercontent.com/33766593/222325850-58d8c2c1-163f-4947-9d64-aaf248fadf47.jpeg)
+![Flowchart (1)](https://user-images.githubusercontent.com/33766593/222327824-70a492b2-358d-44e3-b7e5-3e61ed9da6a8.jpeg)
 
 ## Demo
 
